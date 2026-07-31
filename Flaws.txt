@@ -1,9 +1,0 @@
-Mystery.svg
-Roling doesnt get saved
-Add bar to set username and make it save as well
-remove
-    any discord related stuff
-    changelog
-    ingame chat
-
-icons
