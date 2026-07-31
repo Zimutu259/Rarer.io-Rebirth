@@ -1,0 +1,30 @@
+/*
+ * Hides UI elements that can't function in the offline shim:
+ * - Discord sign-in button (login screen) -> class .i (buttonDiscord)
+ * - Discord server-join button (top-left icon row)
+ * - Changelog button (top-left icon row)
+ * - Chat toggle button + the chat panel itself (log + input)
+ *
+ * Selectors were confirmed directly against the client's minified source,
+ * not guessed - see conversation history for the grep trail.
+ */
+
+/* Sign in with Discord button (login screen) */
+.i { display: none !important; }
+
+/* Discord server + changelog buttons (top-left icon row), targeted by
+   their inline background-image style so nothing else is affected */
+[style*="icons/discord.svg"],
+[style*="icons/changelog.svg"] {
+  display: none !important;
+}
+
+/* Chat toggle button (bottom-center icon row) */
+[style*="icons/chat.svg"] {
+  display: none !important;
+}
+
+/* Chat panel itself (message log + input box), class .V */
+.V {
+  display: none !important;
+}
